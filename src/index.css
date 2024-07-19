@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0c0f1a;
+}
+
+body {
+  background: #0c0f1a;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.05;
+  }
+  50% {
+    transform: translateY(-30px) translateX(30px) scale(1.1);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.05;
+  }
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  animation: float 15s infinite ease-in-out;
+  opacity: 0.05;
+}
+
+.bubble:nth-child(1) {
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 0, 0, 0.5); /* Rojo */
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5), 0 0 40px rgba(255, 0, 0, 0.5); /* Efecto neón */
+  top: 10%;
+  left: 5%;
+  animation-duration: 20s;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(2) {
+  width: 200px;
+  height: 200px;
+  background: rgba(0, 255, 0, 0.5); /* Verde */
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5), 0 0 40px rgba(0, 255, 0, 0.5); /* Efecto neón */
+  top: 20%;
+  left: 25%;
+  animation-duration: 22s;
+  animation-delay: 4s;
+}
+
+.bubble:nth-child(3) {
+  width: 250px;
+  height: 250px;
+  background: rgba(0, 0, 255, 0.5); /* Azul */
+  box-shadow: 0 0 20px rgba(0, 0, 255, 0.5), 0 0 40px rgba(0, 0, 255, 0.5); /* Efecto neón */
+  top: 50%;
+  left: 15%;
+  animation-duration: 24s;
+  animation-delay: 6s;
+}
+
+.bubble:nth-child(4) {
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 0, 0.5); /* Amarillo */
+  box-shadow: 0 0 20px rgba(255, 255, 0, 0.5), 0 0 40px rgba(255, 255, 0, 0.5); /* Efecto neón */
+  top: 30%;
+  left: 50%;
+  animation-duration: 26s;
+  animation-delay: 8s;
+}
+
+.bubble:nth-child(5) {
+  width: 350px;
+  height: 350px;
+  background: rgba(255, 0, 255, 0.5); /* Rosa */
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.5), 0 0 40px rgba(255, 0, 255, 0.5); /* Efecto neón */
+  top: 40%;
+  left: 75%;
+  animation-duration: 28s;
+  animation-delay: 10s;
+}
+
+.bubble:nth-child(6) {
+  width: 100px;
+  height: 100px;
+  background: rgba(0, 255, 255, 0.5); /* Cian */
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 40px rgba(0, 255, 255, 0.5); /* Efecto neón */
+  top: 10%;
+  left: 70%;
+  animation-duration: 30s;
+  animation-delay: 12s;
+}
+
+.bubble:nth-child(7) {
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 165, 0, 0.5); /* Naranja */
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.5), 0 0 40px rgba(255, 165, 0, 0.5); /* Efecto neón */
+  top: 70%;
+  left: 30%;
+  animation-duration: 32s;
+  animation-delay: 14s;
+}
+
+.bubble:nth-child(8) {
+  width: 200px;
+  height: 200px;
+  background: rgba(128, 0, 128, 0.5); /* Púrpura */
+  box-shadow: 0 0 20px rgba(128, 0, 128, 0.5), 0 0 40px rgba(128, 0, 128, 0.5); /* Efecto neón */
+  top: 20%;
+  left: 10%;
+  animation-duration: 34s;
+  animation-delay: 16s;
+}
+
+.bubble:nth-child(9) {
+  width: 180px;
+  height: 180px;
+  background: rgba(255, 20, 147, 0.5); /* Rosa neón */
+  box-shadow: 0 0 20px rgba(255, 20, 147, 0.5), 0 0 40px rgba(255, 20, 147, 0.5); /* Efecto neón */
+  top: 25%;
+  left: 35%;
+  animation-duration: 26s;
+  animation-delay: 8s;
+}
+
+.bubble:nth-child(10) {
+  width: 120px;
+  height: 120px;
+  background: rgba(75, 0, 130, 0.5); /* Índigo */
+  box-shadow: 0 0 20px rgba(75, 0, 130, 0.5), 0 0 40px rgba(75, 0, 130, 0.5); /* Efecto neón */
+  top: 70%;
+  left: 15%;
+  animation-duration: 22s;
+  animation-delay: 4s;
+}
+
+.bubble:nth-child(11) {
+  width: 380px;
+  height: 290px;
+  background: rgba(255, 105, 180, 0.5); /* Hot pink */
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.5), 0 0 40px rgba(255, 105, 180, 0.5); /* Efecto neón */
+  top: 90%;
+  left: 2%;
+  animation-duration: 28s;
+  animation-delay: 10s;
+}
+
+.bubble:nth-child(12) {
+  width: 180px;
+  height: 160px;
+  background: rgba(34, 139, 34, 0.5); /* Verde bosque */
+  box-shadow: 0 0 10px rgba(34, 139, 34, 0.5), 0 0 40px rgba(34, 139, 34, 0.5); /* Efecto neón */
+  top: 15%;
+  left: 85%;
+  animation-duration: 24s;
+  animation-delay: 6s;
+}
