@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaYoutube, FaInstagram } from 'react-icons/fa';
+
 //Componentes
 import About from '../Components/Sections/About';
 import Skills from '../Components/Sections/Skills';
@@ -39,12 +40,28 @@ const ProfileSection = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  padding: 2rem 0;
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('https://www.guatevalley.com/photo/photo_a1/19572/NDN4x7sYwQXsHgVHkUnh.jpg') no-repeat center center/cover;
+    filter: blur(5px); /* Ajusta el nivel de desenfoque aquí */
+    z-index: -1;
+  }
 
   @media (min-width: 769px) {
-    flex-direction: row;
-    text-align: left;
-    align-items: flex-start;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
   }
 `;
 
@@ -54,23 +71,32 @@ const TextSection = styled.div`
   align-items: center;
   margin-left: 0;
   @media (min-width: 769px) {
-    align-items: flex-start;
-    margin-left: 2rem;
+    align-items: center;
+    margin-left: 0;
   }
 `;
 
-const Heading = styled.h2`
-  font-size: 2.5rem;
+const Heading = styled.h1`
+  font-size: 3rem;
   font-weight: bold;
   color: white;
   margin-bottom: 0.5rem;
 `;
 
+const SubHeading = styled.h2`
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 1rem;
+  font-style: italic;
+`;
+
 const Text = styled.p`
   color: white;
   text-align: center;
+  max-width: 800px;
+  margin-bottom: 1rem;
   @media (min-width: 769px) {
-    text-align: left;
+    text-align: center;
   }
 `;
 
@@ -80,7 +106,23 @@ const IconsContainer = styled.div`
   gap: 1.5rem;
   margin-top: 1rem;
   @media (min-width: 769px) {
-    justify-content: flex-start;
+    justify-content: center;
+  }
+`;
+
+const Button = styled.a`
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    background-color: #0056b3;
   }
 `;
 
@@ -95,21 +137,27 @@ export const Inicio = () => {
       <GlassBox>
         <ProfileSection>
           <TextSection>
-            <Heading>Hola, Me llamo Santiago Gonzalez</Heading>
+            <SubHeading>Hi this is</SubHeading>
+            <Heading>Santiago Gonzalez</Heading>
+            <SubHeading>Software developer in Amatitlan, Guatemala</SubHeading>
             <Text>
               Soy un desarrollador apasionado por crear aplicaciones web y soluciones innovadoras. Mi objetivo es utilizar la tecnología para mejorar la vida de las personas y resolver problemas complejos de manera eficiente.
             </Text>
             <IconsContainer>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-400">
+              <a href="https://github.com/sgonzalez-2022140" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-400">
                 <FaGithub size={30} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-400">
+              <a href="https://www.linkedin.com/in/santiago-elisardo-gonzález-herrera-2a4397270/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-400">
                 <FaLinkedin size={30} />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-400">
-                <FaTwitter size={30} />
+              <a href="https://www.youtube.com/@pampichi8271" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-400">
+                <FaYoutube size={30} />
               </a>
+              <a href="https://www.instagram.com/don_pampichi/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-400">
+                <FaInstagram size={30} />
+              </a>              
             </IconsContainer>
+            <Button href="/CV_Actualizado.pdf" download>Descarga mi CV</Button>
           </TextSection>
         </ProfileSection>
         <Section>
