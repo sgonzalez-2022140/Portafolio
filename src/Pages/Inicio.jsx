@@ -128,7 +128,7 @@ const Button = styled.a`
 
 const Section = styled.div`
   width: 95%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 `;
 
 export const Inicio = () => {
